@@ -5,9 +5,42 @@ A simple Craft CMS plugin with different utilities.
 
 ### USAGE
 
-Place tag where you want the date to show this altered date.  
+#### Link an Email Address
+
+Optionally, include class, id, and the text
+
+```
+{{ "test@test.com"|linkemail('myclass', 'myid', 'the text') }}
+{{ "test@test.com"|linkemail('', '', 'my email addy') }} 
+```
+
+### Convert a Comma Separated List (CSV) to a < li > List</h3>
+
+Optionally include a class for the li tag
+This assumes you'll use your own ul or ol tag
+
+```{{ "one, two, three"|csvtolist('myclass') }}```
 
 
+#### Unix Timestamp with Milliseconds Converted to Date Format
+
+Convert a Unix Timestamp with milliseconds to date format
+Optionally, include your own custom date format (defaults to m/d/y)
+
+```
+{{ "1408066314000"|unixmstodate }}
+{{ "1408066314000"|unixmstodate('y-m-d') }}
+```
+
+#### Unix Timestamp Converted to Date Format
+
+Convert a Unix Timestamp without milliseconds to date format
+Optionally, include your own custom date format (defaults to m/d/y)
+
+```
+{{ "1408066314"|unixtodate }}
+{{ "1408066314"|unixtodate('y-m-d') }}
+```
 
 ### SUPPORT
 
