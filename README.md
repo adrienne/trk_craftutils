@@ -14,7 +14,7 @@ Optionally, include class, id, and the text
 {{ "test@test.com"|linkemail('', '', 'my email addy') }} 
 ```
 
-### Convert a Comma Separated List (CSV) to a < li > List</h3>
+#### Convert a Comma Separated List (CSV) to a < li > List</h3>
 
 Optionally include a class for the li tag
 This assumes you'll use your own ul or ol tag
