@@ -164,18 +164,18 @@ class Trk_CraftUtilsTwigExtension extends \Twig_Extension
 		
 		$output = '<a ';
 		
-		if (!empty($class) && isset($class))
+		if (!empty($class))
 		{
 			$output .= 'class="' . htmlspecialchars(trim($class)) . '" ';
 		}
-		if (!empty($id) && isset($id))
+		if (!empty($id))
 		{
 			$output .= 'id="' . htmlspecialchars(trim($id)) . '" ';
 		}
 		
 		$output .= 'href="mailto:' . $str . '">';
 
-		if (!empty($text) && isset($text))
+		if (!empty($text))
 		{
 			$output .= htmlspecialchars(trim($text)) . '</a>';
 		} else {
