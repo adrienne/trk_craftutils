@@ -1,0 +1,62 @@
+{% includeCssResource "trk_craftutils/css/style.css" %}
+
+<h2>Utilities</h2>
+
+<h3>Link an Email Address</h3>
+
+<p>Optionally, include class, id, and the text</p>
+
+{% verbatim %}
+<pre>
+{{ "test@test.com"|linkemail('myclass', 'myid', 'the text') }}
+{{ "test@test.com"|linkemail('', '', 'my email addy') }}
+</pre>
+{% endverbatim %}
+
+
+
+<h3>Convert a Comma Separated List (CSV) to a < li > List</h3>
+<p>Optionally include a class for the li tag<br />
+This assumes you'll use your own ul or ol tag</p>
+
+{% verbatim %}
+<pre>
+{{ "one, two, three"|csvtolist('myclass') }}
+</pre>
+{% endverbatim %}
+
+
+
+
+<h3>Unix Timestamp with Milliseconds Converted to Date Format</h3>
+
+<p>Convert a Unix Date with Milliseconds to Date format<br />
+Optionally, include your own custom date format (defaults to m/d/y)</p>
+
+{% verbatim %}
+<pre>
+{{ "1408066314000"|unixmstodate }}
+{{ "1408066314000"|unixmstodate('y-m-d') }}
+</pre>
+{% endverbatim %}
+
+
+
+<h3>Unix Timestamp Converted to Date Format</h3>
+
+{% verbatim %}
+<pre>
+{{ "1408066314"|unixtodate }}
+{{ "1408066314"|unixtodate('y-m-d') }}
+</pre>
+{% endverbatim %}
+
+
+
+
+
+<div class="threeredkites">
+
+<p>By <span class="red">3 Red Kites Studio Inc.</span> <a href="http://3redkites.com/tags/custom+plugins+addons" target="_blank">http://3redkites.com</a> | Need another utillity? <a href="http://3redkites.com/contact/?plugin=piwik_analytics" target="_blank">Contact us to add more.</a></p>
+
+</div>

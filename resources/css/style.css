@@ -1,0 +1,36 @@
+form div.threeredkites {
+background-color:#FFFAF0;
+padding:6px 6px;
+border:1px solid #dedede;
+margin: 20px 0px;
+}
+.red {
+	color: #EF4723;
+}
+
+form h2 {
+text-transform:uppercase;
+}
+
+.content ul {
+list-style: disc outside none;
+margin-left:15px;
+}
+.content ul li {
+list-style: disc outside none;
+}
+
+pre {
+	background-color:#efefef;
+	padding:3px;
+}
+
+h3 {
+font-size:15px;
+margin:25px 0 9px;
+padding:9px 0;
+}
+
+div.buttons {
+	display:none;
+}
