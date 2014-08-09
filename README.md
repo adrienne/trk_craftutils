@@ -16,16 +16,16 @@ Optionally, include class, id, and the text
 
 #### Convert a Comma Separated List (CSV) to a < li > List</h3>
 
-Optionally include a class for the li tag
-This assumes you'll use your own ul or ol tag
+- Optionally include a class for the li tag
+- This assumes you'll use your own ul or ol tag
 
 ```{{ "one, two, three"|csvtolist('myclass') }}```
 
 
 #### Unix Timestamp with Milliseconds Converted to Date Format
 
-Convert a Unix Timestamp with milliseconds to date format
-Optionally, include your own custom date format (defaults to m/d/y)
+- Convert a Unix Timestamp with milliseconds to date format
+- Optionally, include your own custom date format (defaults to m/d/y)
 
 ```
 {{ "1408066314000"|unixmstodate }}
@@ -34,8 +34,8 @@ Optionally, include your own custom date format (defaults to m/d/y)
 
 #### Unix Timestamp Converted to Date Format
 
-Convert a Unix Timestamp without milliseconds to date format
-Optionally, include your own custom date format (defaults to m/d/y)
+- Convert a Unix Timestamp without milliseconds to date format
+- Optionally, include your own custom date format (defaults to m/d/y)
 
 ```
 {{ "1408066314"|unixtodate }}
