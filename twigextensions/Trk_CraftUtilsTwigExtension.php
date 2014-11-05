@@ -99,6 +99,7 @@ class Trk_CraftUtilsTwigExtension extends \Twig_Extension
 	*  Assumes you'll wrap the list with ul or ol
 	*
 	*  {{ "one, two, three"|csvToList('myclass') }}
+	*  {{ "one, two, three"|csvToList('') }}
 	*/
 	public function csvToList($str='', $class='')
 	{
@@ -143,7 +144,62 @@ class Trk_CraftUtilsTwigExtension extends \Twig_Extension
 	//--------------------------------------------
 	
 
+	/**
+	*  Convert a string that is a separated by a charater into a <li> list
+	*  specify class, optional
+	*  specify the character separator
+	*  Assumes you'll wrap the list with ul or ol
+	*
+	*  {{ "one| two| three"|listToList('myclass', '|') }}
+	*  {{ "one^ two^ three"|listToList('', '^') }}
+	*/
+	public function listToList($str='', $class='', $separator='')
+	{
+		$charset = craft()->templates->getTwig()->getCharset();
+		
+		if (empty($str))
+		{
+			return '';
+		}
 
+		if (!empty($class))
+		{
+			$class = htmlspecialchars(trim($class));
+		}
+
+		if (!empty($separator))
+		{
+			$separator= htmlspecialchars($separator);
+		}
+			
+		$str = htmlspecialchars(trim($str));
+
+		// if only 1 item, then it has no comma, then wrap what is there in <li>
+		if (strstr($str, $separator) === false) {
+			return '<li>' . $str . '</li>';
+		}
+		
+		// remove last space/comma/tab/new line/carriage return from end of string, if any
+		$str = rtrim($str, ' ,\t\n\r');
+		$str = explode(',', $str);
+		$output = '';
+		
+		foreach ($str as $item) 
+		{
+			$output  .= '<li';
+			if ($class != '')
+			{
+				$output .= ' class="' . $class . '"'; 
+			}
+			$output .= '>' . trim($item) . '</li>';
+		}
+
+
+		return new \Twig_Markup($output, $charset);	
+		
+	} // End csvToList
+	//--------------------------------------------
+	
 
 	/**
 	*  Email address, link it up
@@ -186,7 +242,6 @@ class Trk_CraftUtilsTwigExtension extends \Twig_Extension
 		return new \Twig_Markup($output, $charset);	
 	}
 	//--------------------------------------------
-	
 
 }
 // END CLASS

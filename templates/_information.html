@@ -1,8 +1,22 @@
 {% includeCssResource "trk_craftutils/css/style.css" %}
 
+<div class="threeredkites plugin_header">
+	<p>Trk Craft Utils by <span class="red">3 Red Kites Studio</span> <a href="http://3redkites.com/addon/?plugin=piwik_analytics" target="_blank">http://3redkites.com</a> | For web development services, <a href="http://3redkites.com/contact/" target="_blank">contact us</a>.</p>
+</div>
+
 <h2>Utilities</h2>
 
-<h3>Link an Email Address</h3>
+<h3>1. Trim Paragraph Tag</h3>
+
+<p>This will trim the paragraph tag from the beginning and end of string.
+{% verbatim %}
+<pre>
+{{ craft.trk_craftutils.remove_p( entry.newsTitle ) }}
+</pre>
+{% endverbatim %}
+
+
+<h3>2. Link an Email Address</h3>
 
 <p>Optionally, include class, id, and the text</p>
 
@@ -15,7 +29,7 @@
 
 
 
-<h3>Convert a Comma Separated List (CSV) to a < li > List</h3>
+<h3>3. Convert a Comma Separated List (CSV) to a < li > List</h3>
 <p>Optionally include a class for the li tag<br />
 This assumes you'll use your own ul or ol tag</p>
 
@@ -28,7 +42,7 @@ This assumes you'll use your own ul or ol tag</p>
 
 
 
-<h3>Unix Timestamp with Milliseconds Converted to Date Format</h3>
+<h3>4. Unix Timestamp with Milliseconds Converted to Date Format</h3>
 
 <p>Convert a Unix Timestamp with milliseconds to date format<br />
 Optionally, include your own custom date format (defaults to m/d/y)</p>
@@ -42,7 +56,7 @@ Optionally, include your own custom date format (defaults to m/d/y)</p>
 
 
 
-<h3>Unix Timestamp Converted to Date Format</h3>
+<h3>5. Unix Timestamp Converted to Date Format</h3>
 
 <p>Convert a Unix Timestamp without milliseconds to date format<br />
 Optionally, include your own custom date format (defaults to m/d/y)</p>
@@ -54,12 +68,3 @@ Optionally, include your own custom date format (defaults to m/d/y)</p>
 </pre>
 {% endverbatim %}
 
-
-
-
-
-<div class="threeredkites">
-
-<p>By <span class="red">3 Red Kites Studio Inc.</span> <a href="http://3redkites.com/tags/custom+plugins+addons" target="_blank">http://3redkites.com</a> | Need another utillity? <a href="http://3redkites.com/contact/?plugin=piwik_analytics" target="_blank">Contact us to add more.</a></p>
-
-</div>
