@@ -15,7 +15,7 @@ class Trk_CraftUtilsPlugin extends BasePlugin
 {
 	function getName()
 	{
-		return Craft::t('3 Red Kite\'s Craft Utils');
+		return Craft::t('3 Red Kites\' Craft Utils');
 	}
 
 	function getVersion()
